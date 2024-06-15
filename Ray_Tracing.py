@@ -180,11 +180,11 @@ def Trazador_Rayos(Lat_Tx, Long_Tx, Altitud_Tx, frec, elev, azim, Anio, Fecha, U
         
         Pos_Lon_med = int(len(Lon)/2); Pos_Lat_med = int(len(Lat)/2)
         
-        Lon_min = round(Long_Tx,2); Lon_max = round(Lon_Final,2); Lon_med = round(float(Lon[Pos_Lon_med]),2) 
+        Lon_min = round(Long_Tx,2); Lon_max = round(Lon_Final.item(),2); Lon_med = round(float(Lon[Pos_Lon_med]),2) 
         ax.set_yticks([Y[0,0],Y[Pos_Lon_med, Pos_Lon_med], Y[-1,-1]])
         ax.set_yticklabels([Lon_min, Lon_med,Lon_max])
         ax.set_xticks([X[0,0], X[Pos_Lat_med,Pos_Lat_med], X[-1,-1]])
-        Lat_min = round(Lat_Tx,2); Lat_max = round(Lat_Final,2); Lat_med = round(float(Lon[Pos_Lat_med]),2)
+        Lat_min = round(Lat_Tx,2); Lat_max = round(Lat_Final.item(),2); Lat_med = round(float(Lon[Pos_Lat_med]),2)
         ax.set_xticklabels([Lat_min,Lat_med,Lat_max])
         ax.set_zlabel("Altitud (km)")
         
